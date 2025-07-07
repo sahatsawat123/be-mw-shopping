@@ -1,0 +1,6 @@
+@be_mwmw_project_HostAddress = http://localhost:5238
+
+GET {{be_mwmw_project_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
