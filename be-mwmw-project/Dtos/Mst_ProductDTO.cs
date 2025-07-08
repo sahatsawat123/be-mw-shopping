@@ -2,9 +2,9 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Shopping.Models
 {
-    public partial class Mst_Product
+    public partial class Mst_ProductDTO
     {
-        public Guid Product_Id { get; set; }
+        public Guid Product_Id { get; private set; } = Guid.NewGuid();
 
         public string Product_Name { get; set; }
 
@@ -14,7 +14,7 @@ namespace Shopping.Models
 
         public Guid Category_Id { get; set; }
 
-        public Mst_Product()
+        public Mst_ProductDTO()
         {
             if (Product_Name == null)
             {

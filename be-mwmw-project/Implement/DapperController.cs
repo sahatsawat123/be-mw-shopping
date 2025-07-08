@@ -4,11 +4,11 @@ using Npgsql;
 
 namespace Shopping.Interface
 {
-    class CategoryDapperController
+    class DapperController : IDapperController
     {
         private readonly IConfiguration _config;
 
-        public CategoryDapperController(IConfiguration config)
+        public DapperController(IConfiguration config)
         {
             _config = config;
         }

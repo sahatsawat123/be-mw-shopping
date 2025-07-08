@@ -11,10 +11,10 @@ namespace Shopping.Controllers;
 [Route("[Controller]")]
 public class CategoryController : ControllerBase
 {
-    CategoryDapperController _dapper;
+    IDapperController _dapper;
     public CategoryController(IConfiguration config)
     {
-        _dapper = new CategoryDapperController(config);
+        _dapper = new DapperController(config);
     }
 
     [HttpGet("GetCategory")]
@@ -79,6 +79,6 @@ public class CategoryController : ControllerBase
         {
             return Ok();
         }
-        throw new Exception("Failed to Update Category");
+        throw new Exception("Failed to Delete Category");
     }
 }

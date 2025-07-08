@@ -1,8 +1,8 @@
 namespace Shopping.Models
 {
-    public partial class Mst_Customer
+    public partial class Mst_CustomerDTO
     {
-        public Guid Customer_Id { get; set; }
+        public Guid Customer_Id { get; private set; } = Guid.NewGuid();
 
         public string Customer_Name { get; set; }
 
@@ -12,7 +12,7 @@ namespace Shopping.Models
 
         public string Phone_No { get; set; }
 
-        public Mst_Customer()
+        public Mst_CustomerDTO()
         {
             if (Customer_Name == null)
             {
