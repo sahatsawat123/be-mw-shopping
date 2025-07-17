@@ -1,11 +1,11 @@
 namespace Shopping.Models
 {
-    public partial class Trn_Invoice
+    public partial class Trn_InvoiceDTO
     {
-        public Guid SellId { get; set; }
+        public Guid SellId { get; private set;}
         public string InvoiceNumber { get; set; }
 
-        public Trn_Invoice()
+        public Trn_InvoiceDTO()
         { 
             if (InvoiceNumber == null)
             {

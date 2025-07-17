@@ -35,5 +35,19 @@ namespace Shopping.Interface
             IDbConnection dbConnection = new NpgsqlConnection(_config.GetConnectionString("DefaultConnection"));
             return dbConnection.Execute(sql);
         }
+
+        public int ExecuteintSQL(string insertDetailSql)
+        {
+
+                IDbConnection dbConnection = new NpgsqlConnection(_config.GetConnectionString("DefaultConnection"));
+                return dbConnection.Execute(insertDetailSql);
+        }
+
+        public object BeginTransaction()
+        {
+            
+            throw new NotImplementedException();
+        }
+
     }  
 }

@@ -7,4 +7,6 @@ public interface IDapperController
     bool ExecuteSQL(string sql);
 
     int ExecuteSQLRowCount(string sql);
+    object BeginTransaction();
+    int ExecuteintSQL(string sql);
 }
